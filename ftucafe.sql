@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 09, 2018 at 09:40 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 5.6.36
+-- Generation Time: Dec 07, 2020 at 08:45 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.1.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -63,7 +63,7 @@ CREATE TABLE `items` (
   `id` int(5) NOT NULL,
   `name` varchar(20) NOT NULL,
   `price` int(11) NOT NULL,
-  `deleted` tinyint(4) NOT NULL DEFAULT '0'
+  `deleted` tinyint(4) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -135,7 +135,11 @@ INSERT INTO `orderfood` (`id`, `item_id`, `qt`, `price`, `cus`, `numtable`) VALU
 (107, 22, 4, 360, 'anas', 8),
 (108, 13, 2, 40, 'anas', 5),
 (109, 16, 1, 25, 'anas', 5),
-(110, 19, 3, 150, 'anas', 5);
+(110, 19, 3, 150, 'anas', 5),
+(111, 1, 1, 55, 'raiyan', 5),
+(112, 27, 1, 150, 'raiyan', 5),
+(113, 1, 1, 55, 'raiyan', 9),
+(114, 23, 1, 80, 'raiyan', 9);
 
 -- --------------------------------------------------------
 
@@ -201,7 +205,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `orderfood`
 --
 ALTER TABLE `orderfood`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
 -- Constraints for dumped tables
